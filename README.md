@@ -103,7 +103,9 @@ For more details about Postman, please refer to [Postman Chrome webstore](https:
 
 
 ## API Usage Examples
-- GET http://w7500xRESTAPI.local
+```
+GET http://w7500xRESTAPI.local
+```
   - Results: It returns all resources list supported by the board as representation in JSON.
     - Includes defined id list for I/O pins
   - URL '/' is substituted with '/index', Thus, this URL is recognized as [http://w7500xRESTAPI.local/index]
