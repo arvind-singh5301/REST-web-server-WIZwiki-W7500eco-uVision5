@@ -31,6 +31,8 @@ For more details, please refer to [WIZ550web Wiki page](http://wizwiki.net/wiki/
   - 'c' : P28 pin (digital input / digital output / analog input)
   - 'd' : P27 pin (digital input / digital output / analog input)
 
+- - - 
+
 ### URI: HTTP GET method
 ##### index: Resource lists
 ```
@@ -62,12 +64,15 @@ http://w7500xRESTAPI.local/userio/:id
 http://w7500xRESTAPI.local/userio/:id/info
 ```
 
+- - - 
 
 ### URI: HTTP POST method
 ##### userio/id: Activate (Create) the specified IO
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
+
+- - - 
 
 ### URI: HTTP PUT method* (in development)
 ##### userio/id: Set the User IO's status or value
@@ -80,12 +85,15 @@ http://w7500xRESTAPI.local/userio/:id
 http://w7500xRESTAPI.local/userio/:id/info
 ```
 
+- - - 
+
 ### URI: HTTP DELETE method
 ##### userio/id: Deactivate (Delete) the specified IO
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
 
+- - - 
 
 ## Testing
 Connect your board to your network and run test tool. These library has been tested on Postman Builder.
