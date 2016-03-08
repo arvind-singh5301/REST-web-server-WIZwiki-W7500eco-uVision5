@@ -3,7 +3,8 @@ Simple REST Web server library for small IoT devices.
 Users can be made the IoT device for REST-based web services available in this project using C language / WIZwiki-W7500ECO platform board.
 
 ## Target Board and IDE
-### WIZWiki-W7500ECO
+### Target Board
+#### WIZWiki-W7500ECO
 <!-- WIZwiki-W7500ECO pic -->
 <p align="center">
   <img width="60%" src="http://wizwiki.net/wiki/lib/exe/fetch.php?cache=&media=products:wizwiki-w7500eco:wizwiki-w7500eco3dtop.png" />
@@ -16,7 +17,8 @@ Users can be made the IoT device for REST-based web services available in this p
 
 For more details, please refer to [WIZ550web Wiki page](http://wizwiki.net/wiki/doku.php?id=products:wizwiki-w7500eco:start) in [WIZnet Wiki](http://wizwiki.net).
 
-### Keil uVision5
+### Development Environment
+#### Keil uVision5 IDE v5.10
 
 
 ## REST API Design
@@ -29,24 +31,60 @@ For more details, please refer to [WIZ550web Wiki page](http://wizwiki.net/wiki/
   - 'c' : P28 pin (digital input / digital output / analog input)
   - 'd' : P27 pin (digital input / digital output / analog input)
 
-### HTTP GET method
-  - http://w7500xRESTAPI.local/index
-  - http://w7500xRESTAPI.local/uptime
-  - http://w7500xRESTAPI.local/netinfo
-  - http://w7500xRESTAPI.local/userio
-  - http://w7500xRESTAPI.local/userio/:id
-  - http://w7500xRESTAPI.local/userio/:id/info
+### URI: HTTP GET method
+##### index: Resource lists
+```
+http://w7500xRESTAPI.local/index
+```
 
-### HTTP POST method
-  - http://w7500xRESTAPI.local/userio/:id
+##### uptime
+```
+http://w7500xRESTAPI.local/uptime
+```
 
-### HTTP PUT method* (in development)
-  - http://w7500xRESTAPI.local/userio/:id
-  - http://w7500xRESTAPI.local/userio/:id/info
+##### netinfo: Network information (e.g., MAC / IP ...)
+```
+http://w7500xRESTAPI.local/netinfo
+```
 
-### HTTP DELETE method
-  - http://w7500xRESTAPI.local/userio/:id
+##### userio: All active user IO's ID / Type (Digital or Analog) / Direction (Input or Output)
+```
+http://w7500xRESTAPI.local/userio
+```
 
+##### userio/id: Get the User IO's status or value
+```
+http://w7500xRESTAPI.local/userio/:id
+```
+
+##### userio/id/info: user IO's ID / Type / Direction
+```
+http://w7500xRESTAPI.local/userio/:id/info
+```
+
+
+### URI: HTTP POST method
+##### userio/id: Activate (Create) the specified IO
+```
+http://w7500xRESTAPI.local/userio/:id
+```
+
+### URI: HTTP PUT method* (in development)
+##### userio/id: Set the User IO's status or value
+```
+http://w7500xRESTAPI.local/userio/:id
+```
+
+##### userio/id: Set (changes) the User IO's Type / Direction
+```
+http://w7500xRESTAPI.local/userio/:id/info
+```
+
+### URI: HTTP DELETE method
+##### userio/id: Deactivate (Delete) the specified IO
+```
+http://w7500xRESTAPI.local/userio/:id
+```
 
 
 ## Testing
@@ -56,5 +94,14 @@ For more details about Postman, please refer to [Postman Chrome webstore](https:
 
 
 
-## Usage
-### Under construction
+## API Usage Examples
+- GET http://w7500xRESTAPI.local
+  - Results: It returns all resources list supported by the board as representation in JSON.
+    - Includes defined id list for I/O pins
+  - URL '/' is substituted with '/index', Thus, this URL is recognized as [http://w7500xRESTAPI.local/index]
+
+<p align="center">
+  <img width="70%" src="https://ericslabs.files.wordpress.com/2016/03/get_index-1.png" />
+</p>
+
+
