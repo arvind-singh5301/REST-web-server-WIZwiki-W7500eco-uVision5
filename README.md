@@ -23,8 +23,12 @@ For more details, please refer to [WIZ550web Wiki page](http://wizwiki.net/wiki/
 
 ## REST API Design
 
-* REST API Document is under construction.
+* All resources(URI) are represented in lower case letters.
+* REST API Document is under construction. It will be update continuously.
 
+
+- - - 
+### Symbols
 [:id] : pre-defined 4-I/O pins, 'a', 'b', 'c', 'd'.
   - 'a' : P30 pin (digital input / digital output / analog input)
   - 'b' : P29 pin (digital input / digital output / analog input)
