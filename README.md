@@ -76,7 +76,7 @@ http://w7500xRESTAPI.local/uptime
 ```
 http://w7500xRESTAPI.local/netinfo
 ```
- - Network information (e.g., MAC / IP ...)
+ - Network information (e.g., MAC / IP address ...)
 
 ##### userio
 ```
@@ -112,7 +112,7 @@ http://w7500xRESTAPI.local/userio/:id
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
- - Set (change) the User IO's status or value
+ - Set (change) the User IO's status (digital output only)
 
 ##### userio/id
 ```
