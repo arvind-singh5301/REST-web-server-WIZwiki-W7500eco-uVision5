@@ -24,14 +24,14 @@ Users can be made the IoT device for REST-based web services available in this p
 For more details, please refer to [WIZ550web Wiki page](http://wizwiki.net/wiki/doku.php?id=products:wizwiki-w7500eco:start) in [WIZnet Wiki](http://wizwiki.net).
 
 ### Development Environment
-#### Keil uVision5 IDE v5.10
+ - Keil uVision5 IDE v5.10
 
 ## Build and Firmware Update
 Build and Firmware write to target board: WIZwiki-W7500ECO
 
 ### Project Build
-KEIL uVision5 project file can be found in below file path
-[$Projects/HTTP_Server_RESTAPI/W7500x_App.uvproj](https://github.com/hkjung/REST-web-server-WIZwiki-W7500eco-uVision5/tree/master/Projects/HTTP_Server_RESTAPI)
+KEIL uVision5 project file can be found in below file path.
+ - [$Projects/HTTP_Server_RESTAPI/W7500x_App.uvproj](https://github.com/hkjung/REST-web-server-WIZwiki-W7500eco-uVision5/tree/master/Projects/HTTP_Server_RESTAPI)
 
 ### Firmware Write
  - Writing firmware into WIZwiki-W7500ECO has three ways
@@ -39,7 +39,8 @@ KEIL uVision5 project file can be found in below file path
    - Using the CMSIS-DAP (through KEIL uVision5)
    - Using the ISP (ISP, In-System Programming)
 
-For more details, please refer to WIZnet wiki site; [How to write the firmware into WIZwiki-W7500P page](http://wizwiki.net/wiki/doku.php?id=products:wizwiki_w7500eco:start_getting_started:write_firmware)
+For more details, please refer to WIZnet wiki site.
+ - [How to write the firmware into WIZwiki-W7500ECO page](http://wizwiki.net/wiki/doku.php?id=products:wizwiki_w7500eco:start_getting_started:write_firmware)
 
 
 ## REST API Design
@@ -63,37 +64,37 @@ For more details, please refer to WIZnet wiki site; [How to write the firmware i
 ```
 http://w7500xRESTAPI.local/index
 ```
-- Controllable all IO pins and Resources list includes URL, HTTP method and simple descriptions
+ - Controllable all IO pins and Resources list includes URL, HTTP method and simple descriptions
 
 ##### uptime
 ```
 http://w7500xRESTAPI.local/uptime
 ```
-- Device uptime
+ - Device uptime
 
 ##### netinfo
 ```
 http://w7500xRESTAPI.local/netinfo
 ```
-- Network information (e.g., MAC / IP ...)
+ - Network information (e.g., MAC / IP ...)
 
 ##### userio
 ```
 http://w7500xRESTAPI.local/userio
 ```
-- All active user IO's ID / Type (Digital or Analog) / Direction (Input or Output)
+ - All active user IO's ID / Type (Digital or Analog) / Direction (Input or Output)
 
 ##### userio/id
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
-- Get the User IO's status or value
+ - Get the User IO's status or value
 
 ##### userio/id/info
 ```
 http://w7500xRESTAPI.local/userio/:id/info
 ```
-- Get the user IO's ID / Type / Direction
+ - Get the user IO's ID / Type / Direction
 
 - - - 
 
@@ -102,7 +103,7 @@ http://w7500xRESTAPI.local/userio/:id/info
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
-- Activate (Create) the specified IO
+ - Activate (Create) the specified IO
 
 - - - 
 
@@ -111,13 +112,13 @@ http://w7500xRESTAPI.local/userio/:id
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
-- Set (change) the User IO's status or value
+ - Set (change) the User IO's status or value
 
 ##### userio/id
 ```
 http://w7500xRESTAPI.local/userio/:id/info
 ```
-- Set (change) the User IO's Type / Direction
+ - Set (change) the User IO's Type / Direction
 
 - - - 
 
@@ -126,7 +127,7 @@ http://w7500xRESTAPI.local/userio/:id/info
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
-- Deactivate (Delete) the specified IO
+ - Deactivate (Delete) the specified IO
 
 - - - 
 
