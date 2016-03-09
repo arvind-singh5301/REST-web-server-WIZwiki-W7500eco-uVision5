@@ -26,6 +26,21 @@ For more details, please refer to [WIZ550web Wiki page](http://wizwiki.net/wiki/
 ### Development Environment
 #### Keil uVision5 IDE v5.10
 
+## Build and Firmware Update
+Build and Firmware write to target board: WIZwiki-W7500ECO
+
+### Project Build
+KEIL uVision5 project file can be found in below file path
+[$Projects/HTTP_Server_RESTAPI/W7500x_App.uvproj](https://github.com/hkjung/REST-web-server-WIZwiki-W7500eco-uVision5/tree/master/Projects/HTTP_Server_RESTAPI)
+
+### Firmware Write
+ - Writing firmware into WIZwiki-W7500ECO has three ways
+   - Using the CMSIS-DAP (Drag and Drop)
+   - Using the CMSIS-DAP (through KEIL uVision5)
+   - Using the ISP (ISP, In-System Programming)
+
+For more details, please refer to WIZnet wiki site; [How to write the firmware into WIZwiki-W7500P page](http://wizwiki.net/wiki/doku.php?id=products:wizwiki_w7500eco:start_getting_started:write_firmware)
+
 
 ## REST API Design
 
@@ -44,64 +59,74 @@ For more details, please refer to [WIZ550web Wiki page](http://wizwiki.net/wiki/
 - - - 
 
 ### URI: HTTP GET method
-##### index: Resource lists
+##### index
 ```
 http://w7500xRESTAPI.local/index
 ```
+- Controllable all IO pins and Resources list includes URL, HTTP method and simple descriptions
 
 ##### uptime
 ```
 http://w7500xRESTAPI.local/uptime
 ```
+- Device uptime
 
-##### netinfo: Network information (e.g., MAC / IP ...)
+##### netinfo
 ```
 http://w7500xRESTAPI.local/netinfo
 ```
+- Network information (e.g., MAC / IP ...)
 
-##### userio: All active user IO's ID / Type (Digital or Analog) / Direction (Input or Output)
+##### userio
 ```
 http://w7500xRESTAPI.local/userio
 ```
+- All active user IO's ID / Type (Digital or Analog) / Direction (Input or Output)
 
-##### userio/id: Get the User IO's status or value
+##### userio/id
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
+- Get the User IO's status or value
 
-##### userio/id/info: user IO's ID / Type / Direction
+##### userio/id/info
 ```
 http://w7500xRESTAPI.local/userio/:id/info
 ```
+- Get the user IO's ID / Type / Direction
 
 - - - 
 
 ### URI: HTTP POST method
-##### userio/id: Activate (Create) the specified IO
+##### userio/id
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
+- Activate (Create) the specified IO
 
 - - - 
 
 ### URI: HTTP PUT method* (in development)
-##### userio/id: Set the User IO's status or value
+##### userio/id
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
+- Set (change) the User IO's status or value
 
-##### userio/id: Set (changes) the User IO's Type / Direction
+##### userio/id
 ```
 http://w7500xRESTAPI.local/userio/:id/info
 ```
+- Set (change) the User IO's Type / Direction
 
 - - - 
 
 ### URI: HTTP DELETE method
-##### userio/id: Deactivate (Delete) the specified IO
+##### userio/id
 ```
 http://w7500xRESTAPI.local/userio/:id
 ```
+- Deactivate (Delete) the specified IO
 
 - - - 
 
