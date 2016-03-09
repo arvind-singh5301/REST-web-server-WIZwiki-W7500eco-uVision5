@@ -103,6 +103,7 @@ For more details about Postman, please refer to [Postman Chrome webstore](https:
 
 
 ## API Usage Examples
+### Get index
 ```
 GET http://w7500xRESTAPI.local
 ```
@@ -114,4 +115,22 @@ GET http://w7500xRESTAPI.local
   <img width="70%" src="https://ericslabs.files.wordpress.com/2016/03/get_index-1.png" />
 </p>
 
+### Get netinfo
+```
+GET http://w7500xRESTAPI.local/netinfo
+```
+  - Results: It returns board's network setting like MAC / IP address as representation in JSON.
 
+<p align="center">
+  <img width="70%" src="https://ericslabs.files.wordpress.com/2016/03/get_netinfo_.png" />
+</p>
+
+### Get userio
+```
+GET http://w7500xRESTAPI.local/userio
+```
+  - Results: It returns setting of activated IO on board as representation in JSON. Each IO's JSON object includes three-keys. (ID / Type / Direction)
+
+<p align="center">
+  <img width="70%" src="https://ericslabs.files.wordpress.com/2016/03/get_userio.png" />
+</p>
